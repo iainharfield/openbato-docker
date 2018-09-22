@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Change these settings
+SERVER_IP="192.168.1.139"
+RABBIT_IP="192.168.1.126"
+
+# Deploy openbaton zabbix plugin.
+
+docker run -d \
+  --name="zabbix-plugin" \
+  --restart=always \
+  -e ZABBIX_HOST=$SERVER_IP \
+  -e RABBITMQ_BROKERIP=$RABBIT_IP \
+  -v $HOME/docker/zabbix-plugin/properties:/etc/openbaton \
+  openbaton/plugin-monitoring-zabbix:latest
