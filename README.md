@@ -1,2 +1,3 @@
-# openbato-docker
-docker compose file - thanks to Michael
+# openbaton-docker
+Open Baton docker compose file 
+Startup docker script for Zabbix
