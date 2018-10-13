@@ -13,3 +13,4 @@ docker run -d \
   -e RABBITMQ_BROKERIP=$RABBIT_IP \
   -v $HOME/docker/zabbix-plugin/properties:/etc/openbaton \
   openbaton/plugin-monitoring-zabbix:latest
+
